@@ -46,4 +46,9 @@
     <ProjectReference Include="..\Xamarin.PropertyEditing\Xamarin.PropertyEditing.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey"
+      Value="$(XpfLicenseKey)" />
+  </ItemGroup>
+
 </Project>
