@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Xpf.Sdk/1.4.0">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net6.0-windows;net472</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <RootNamespace>Xamarin.PropertyEditing.Windows.Standalone</RootNamespace>
     <AssemblyName>Xamarin.PropertyEditing.Windows.Standalone</AssemblyName>
     <UseWPF>true</UseWPF>

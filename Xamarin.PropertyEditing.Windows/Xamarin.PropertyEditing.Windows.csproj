@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Xpf.Sdk/1.4.0">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0-windows;net472</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <RootNamespace>Xamarin.PropertyEditing.Windows</RootNamespace>
     <AssemblyName>Xamarin.PropertyEditing.Windows</AssemblyName>
     <UseWPF>true</UseWPF>
@@ -32,6 +32,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Xamarin.PropertyEditing\Xamarin.PropertyEditing.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="AvaloniaUI.Xpf.LicenseKey"
+      Value="$(XpfLicenseKey)" />
   </ItemGroup>
 
 </Project>
