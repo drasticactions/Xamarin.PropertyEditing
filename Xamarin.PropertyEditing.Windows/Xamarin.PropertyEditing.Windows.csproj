@@ -1,4 +1,4 @@
-<Project Sdk="Xpf.Sdk/1.4.0">
+<Project Sdk="Xpf.Sdk/1.6.0-cibuild002171">
 
   <PropertyGroup>
     <TargetFrameworks>net6.0-windows</TargetFrameworks>
