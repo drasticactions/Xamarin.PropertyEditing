@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup Condition=" $(IsMac)" >
-    <TargetFramework>net6.0</TargetFramework>
-  </PropertyGroup>
-  <PropertyGroup Condition=" $(IsWindows)" >
-    <TargetFramework>net472</TargetFramework>
+  <PropertyGroup>
+   <TargetFrameworks>net6.0;net472</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,4 +28,3 @@
   </ItemGroup>
 
 </Project>
-

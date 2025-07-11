@@ -1,226 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{60AF04BE-1B6B-411B-BCBA-C95EAFBD7AC0}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworks>net6.0-windows;net472</TargetFrameworks>
     <RootNamespace>Xamarin.PropertyEditing.Windows</RootNamespace>
     <AssemblyName>Xamarin.PropertyEditing.Windows</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <UseWPF>true</UseWPF>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="PresentationFramework.Aero" />
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Presentation" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="UIAutomationProvider" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
+
   <ItemGroup>
     <Compile Include="..\Xamarin.PropertyEditing\Properties\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="ArrangeModeLocalizedConverter.cs" />
-    <Compile Include="AutoResizingMaskEditorControl.cs" />
-    <Compile Include="BoolEditorControl.cs" />
-    <Compile Include="BoolsToVisibilityConverter.cs" />
-    <Compile Include="BrushBoxControl.cs" />
-    <Compile Include="BrushChoiceTemplateSelector.cs" />
-    <Compile Include="BrushEditorControl.cs" />
-    <Compile Include="BrushTabbedEditorControl.cs" />
-    <Compile Include="BrushToDarknessConverter.cs" />
-    <Compile Include="ButtonEx.cs" />
-    <Compile Include="ByteToDoubleConverter.cs" />
-    <Compile Include="CategoryExpander.cs" />
-    <Compile Include="CollectionEditor.cs" />
-    <Compile Include="CollectionEditorWindow.xaml.cs">
-      <DependentUpon>CollectionEditorWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CombinablePredefinedValuesEditorControl.cs" />
-    <Compile Include="ComboBoxEx.cs" />
-    <Compile Include="CommonBrushToBrushConverter.cs" />
-    <Compile Include="ByteToPercentageConverter.cs" />
-    <Compile Include="ChoiceControl.cs" />
-    <Compile Include="ColorComponentBox.cs" />
-    <Compile Include="ColorComponentModel.cs" />
-    <Compile Include="ColorComponentsEditorControl.cs" />
-    <Compile Include="ColorComponentToBrushConverter.cs" />
-    <Compile Include="ColorEditorControlBase.cs" />
-    <Compile Include="ColorHelper.cs" />
-    <Compile Include="CommonColorToColorConverter.cs" />
-    <Compile Include="CreateBindingWindow.xaml.cs">
-      <DependentUpon>CreateBindingWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CreateResourceWindow.xaml.cs">
-      <DependentUpon>CreateResourceWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CreateVariantWindow.xaml.cs">
-      <DependentUpon>CreateVariantWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DateEditorControl.cs" />
-    <Compile Include="DateToTextConverter.cs" />
-    <Compile Include="DoubleToAngleConverter.cs" />
-    <Compile Include="CreateValueConverterWindow.xaml.cs">
-      <DependentUpon>CreateValueConverterWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="EntryPopup.cs" />
-    <Compile Include="CurrentColorEditorControl.cs" />
-    <Compile Include="DoubleToPercentageConverter.cs" />
-    <Compile Include="DoubleToQuantityConverter.cs" />
-    <Compile Include="FilterExpander.cs" />
-    <Compile Include="HasItemsToVisibilityConverter.cs" />
-    <Compile Include="InvertedVisibilityConverter.cs" />
-    <Compile Include="InvokePropertyButtonCommand.cs" />
-    <Compile Include="IPropertiesHost.cs" />
-    <Compile Include="MaterialDesignColorEditorControl.cs" />
-    <Compile Include="MultiplierConverter.cs" />
-    <Compile Include="MultiplyMarginConverter.cs" />
-    <Compile Include="NegativeThicknessConverter.cs" />
-    <Compile Include="NullVisibilityConverter.cs" />
-    <Compile Include="ObjectEditorControl.cs" />
-    <Compile Include="PreviewTemplateSelector.cs" />
-    <Compile Include="ResourceBrushEditorControl.cs" />
-    <Compile Include="ResourceSelectorWindow.xaml.cs">
-      <DependentUpon>ResourceSelectorWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Spinner.cs" />
-    <Compile Include="TextBoxEx.cs" />
-    <Compile Include="TimeEditorControl.cs" />
-    <Compile Include="TimeToTextConverter.cs" />
-    <Compile Include="ToggleButtonEx.cs" />
-    <Compile Include="EditorPropertySelector.cs" />
-    <Compile Include="EnumEditorControl.cs" />
-    <Compile Include="HexColorConverter.cs" />
-    <Compile Include="HeaderedContextMenu.cs" />
-    <Compile Include="GroupEditorControl.cs" />
-    <Compile Include="HostEnvironment.cs" />
-    <Compile Include="MenuButton.cs" />
-    <Compile Include="NumericEditorControl.cs" />
-    <Compile Include="NumericTemplateSelector.cs" />
-    <Compile Include="NumericUpDownControl.cs" />
-    <Compile Include="OppositeBoolConverter.cs" />
-    <Compile Include="PointEditorControl.cs" />
-    <Compile Include="PointHelper.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyButton.cs" />
-    <Compile Include="PropertyEditorControl.cs" />
-    <Compile Include="PropertyEditorPanel.cs" />
-    <Compile Include="PropertyMenuItemContainerStyleSelector.cs" />
-    <Compile Include="PropertyPresenter.cs" />
-    <Compile Include="ShadeEditorControl.cs" />
-    <Compile Include="RatioEditorControl.cs" />
-    <Compile Include="SizeEditorControl.cs" />
-    <Compile Include="HueEditorControl.cs" />
-    <Compile Include="SolidBrushEditorControl.cs" />
-    <Compile Include="ThicknessEditorControl.cs" />
-    <Compile Include="StringEditorControl.cs" />
-    <Compile Include="TreeViewItemEx.cs" />
-    <Compile Include="TypeEditorControl.cs" />
-    <Compile Include="TypeSelectorControl.xaml.cs">
-      <DependentUpon>TypeSelectorControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TypeSelectorWindow.xaml.cs">
-      <DependentUpon>TypeSelectorWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="WindowEx.cs" />
-    <Compile Include="XamlHelper.cs" />
   </ItemGroup>
+
   <ItemGroup>
-    <Page Include="CollectionEditorWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CreateBindingWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CreateResourceWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CreateValueConverterWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CreateVariantWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ResourceSelectorWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\DialogResources.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Resources.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\PropertyEditorPanelStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\VS.Dark.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\VS.Light.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TypeSelectorControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TypeSelectorWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <ProjectReference Include="..\Xamarin.PropertyEditing\Xamarin.PropertyEditing.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Xamarin.PropertyEditing\Xamarin.PropertyEditing.csproj">
-      <Project>{A0B6FE73-D046-4E1C-BA9D-F20683889C5A}</Project>
-      <Name>Xamarin.PropertyEditing</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Themes\MenuButtonStyle.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>
