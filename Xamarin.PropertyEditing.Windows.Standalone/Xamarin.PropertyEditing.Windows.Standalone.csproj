@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net9.0-windows</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
     <RootNamespace>Xamarin.PropertyEditing.Windows.Standalone</RootNamespace>
     <AssemblyName>Xamarin.PropertyEditing.Windows.Standalone</AssemblyName>
     <UseWPF>true</UseWPF>
